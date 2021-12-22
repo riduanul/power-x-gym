@@ -7,6 +7,10 @@ export default function Services() {
       <div className="progression">Progression</div>
       <div className="workOut">WorkOut</div>
       <div className="nutrition">nutritions</div>
+      <div className="progression">Progression</div>
+      <div className="workOut">WorkOut</div>
+      <div className="nutrition">nutritions</div>
+      <div className="nutrition">nutritions</div>
     </div>
   );
 }
