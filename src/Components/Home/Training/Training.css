@@ -1,0 +1,33 @@
+.training {
+  position: relative;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 38px;
+  left: 12px;
+  background-color: rgba(233, 220, 32, 0.801);
+  width: 350px;
+  height: 70px;
+  text-align: center;
+  padding-top: 22px;
+  font-weight: 900;
+  color: rgb(109, 46, 83);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 38px;
+  left: 12px;
+  background-color: rgba(233, 220, 32, 0.801);
+  width: 350px;
+  height: 70px;
+  text-align: center;
+  padding-top: 22px;
+  font-weight: 900;
+  color: rgb(109, 46, 83);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}

@@ -14,10 +14,9 @@ export default function Header() {
           <br></br>
           <p>
             lorem impsum has been the industry's standard dummy text ever since
-            the 1500's <br /> when an unknown printer took a galley of type and
-            srambled it to make a type <br />
-            spedcimen book. it has survived not onleting. remeainngy five
-            cdenturies, but also the leap
+            the 1500's when an unknown printer took a galley of type and
+            srambled it to make a type spedcimen book. it has survived not
+            onleting. remeainngy five cdenturies, but also the leap
             <br /> into electronic types
           </p>{" "}
           <br />

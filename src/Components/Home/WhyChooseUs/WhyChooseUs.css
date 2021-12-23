@@ -1,0 +1,23 @@
+.box-prop {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  column-gap: 20px;
+}
+.box {
+  width: 350px;
+  height: 400px;
+  border: 1px solid lightgray;
+  padding: 10px;
+  text-align: center;
+  padding-top: 70px;
+  line-height: 30px;
+  margin: 10px;
+  box-shadow: 1px 2px 10px gray;
+}
+
+.box:hover {
+  transform: translate(-10px, -10px);
+  transition-duration: 200ms;
+  border: 2px solid orange;
+  cursor: pointer;
+}

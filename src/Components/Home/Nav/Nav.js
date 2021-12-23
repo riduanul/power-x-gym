@@ -1,12 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./Nav.css";
 
 export default function Nav() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light ">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="hpme">
           <h3 style={{ color: "white", fontWeight: "900" }}>
-            POWER <span style={{ color: "yellow" }}>X</span>
+            POWER <span style={{ color: "orange" }}>X</span>
           </h3>
         </a>
         <button
@@ -20,35 +22,48 @@ export default function Nav() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse text-white  " id="navbarNav">
-          <ul className="navbar-nav ms-auto ">
+        <div className="collapse navbar-collapse " id="navbarNav">
+          <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
+              <Link to="/">
+                <a
+                  className="nav-link active  text-white"
+                  aria-current="page"
+                  href="home"
+                >
+                  Home
+                </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link  text-white" href="service">
                 Service
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link to="classes">
+                <a className="nav-link  text-white" href="service">
+                  Our Classes
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link  text-white" href="pricing">
                 Pricing
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link " href="#">
+              <a className="nav-link  text-white" href="blog">
                 Blog
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link " href="#">
+              <a className="nav-link  active text-white" href="about">
                 About Us
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link " href="#">
+              <a className="nav-link  text-white" href="contact">
                 Contact Us
               </a>
             </li>
