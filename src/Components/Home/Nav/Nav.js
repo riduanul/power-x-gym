@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Nav.css";
 
 export default function Nav() {
@@ -23,49 +23,36 @@ export default function Nav() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse " id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <Link to="/">
-                <a
-                  className="nav-link active  text-white"
-                  aria-current="page"
-                  href="home"
-                >
-                  Home
-                </a>
-              </Link>
+          <ul className="navbar-nab ms-auto">
+            <li>
+              <NavLink to="/" className="nav_link">
+                Home
+              </NavLink>
             </li>
-            <li className="nav-item">
-              <a className="nav-link  text-white" href="service">
-                Service
-              </a>
+            <li>
+              <NavLink to="/services" className="nav_link">
+                Services
+              </NavLink>
             </li>
-            <li className="nav-item">
-              <Link to="classes">
-                <a className="nav-link  text-white" href="service">
-                  Our Classes
-                </a>
-              </Link>
+            <li>
+              <NavLink to="/classes" className="nav_link">
+                Classes
+              </NavLink>
             </li>
-            <li className="nav-item">
-              <a className="nav-link  text-white" href="pricing">
+            <li>
+              <NavLink to="/pricing" className="nav_link">
                 Pricing
-              </a>
+              </NavLink>
             </li>
-            <li className="nav-item">
-              <a className="nav-link  text-white" href="blog">
+            <li>
+              <NavLink to="/blog" className="nav_link">
                 Blog
-              </a>
+              </NavLink>
             </li>
-            <li className="nav-item">
-              <a className="nav-link  active text-white" href="about">
-                About Us
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link  text-white" href="contact">
+            <li>
+              <NavLink to="/contact" className="nav_link">
                 Contact Us
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

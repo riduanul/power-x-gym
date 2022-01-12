@@ -1,0 +1,59 @@
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 40px;
+}
+.advance {
+  height: 450px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../../Images/workout.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: relative;
+  background-blend-mode: darken;
+  text-align: center;
+  color: white;
+  padding: 50px 40px;
+}
+.basic {
+  height: 450px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../../Images/training2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: relative;
+  text-align: center;
+  z-index: 100;
+  color: white;
+  padding: 50px;
+}
+.beginer {
+  height: 450px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../../Images/aboutus.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: relative;
+  text-align: center;
+  z-index: 100;
+  color: white;
+  padding: 50px;
+}
+/* .advance-text {
+  position: absolute;
+} */
+
+.purchase-btn {
+  margin-top: 30px;
+  background-color: orange;
+  border: none;
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.purchase-btn:hover {
+  background-color: rgb(53, 51, 51);
+  color: orange;
+}

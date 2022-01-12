@@ -14,26 +14,26 @@ export default function Footer() {
           </div>
           <div className="col-md-2">
             <p style={{ fontWeight: "600" }}>Need Help?</p>
-            <a>Help Center</a> <br />
-            <a>Email Support</a>
+            <a href="help">Help Center</a> <br />
+            <a href="email">Email Support</a>
             <br />
-            <a>Live Chat</a>
+            <a href="livaChat">Live Chat</a>
             <br />
-            <a>Gift Certificates</a>
+            <a href="gift">Gift Certificates</a>
             <br />
-            <a>Send Us Feedback</a>
+            <a href="feedback">Send Us Feedback</a>
           </div>
           <div className="col-md-2">
             <p style={{ fontWeight: "600" }}>Degital Resorces</p>
-            <a>Articles</a>
+            <a href="articles">Articles</a>
             <br />
-            <a>E-Books</a>
+            <a href="ebooks">E-Books</a>
           </div>
           <div className="col-md-2">
             <p style={{ fontWeight: "600" }}>Contact With Us</p>
-            <a>Articles</a>
+            <a href="articles">Articles</a>
             <br />
-            <a>Forums</a>
+            <a href="forums">Forums</a>
           </div>
           <div className="col-md-3">
             <p style={{ fontWeight: "600" }}>Join Out Newsletter</p>

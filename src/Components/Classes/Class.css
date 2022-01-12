@@ -1,0 +1,19 @@
+.class-title {
+  width: 290px;
+  height: 37px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 1px solid orange;
+  background-color: orange;
+  color: black;
+  text-align: center;
+  margin-top: -70px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.class-title:hover {
+  background-color: white;
+  color: orange;
+  border: none;
+}

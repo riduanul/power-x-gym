@@ -1,0 +1,10 @@
+.classes-item {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-items: center;
+  row-gap: 30px;
+  column-gap: 30px;
+}
+.container {
+  margin-top: 50px;
+}
