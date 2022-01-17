@@ -2,6 +2,8 @@ import React from "react";
 import CommonHeader from "../Home/Common/CommonHeader";
 import Footer from "../Home/Footer/Footer";
 import "./Pricing.css";
+import { NavLink } from "react-router-dom";
+
 export default function Pricing() {
   return (
     <div>
@@ -28,8 +30,9 @@ export default function Pricing() {
           <h5>Free Custom</h5>
           <h5>Outstanding</h5>
           <h5>Happy Customers</h5>
-          <button className="purchase-btn">PURCHASE</button>
-          {/* </div> */}
+          <NavLink to="/membership">
+            <button className="purchase-btn">PURCHASE</button>
+          </NavLink>
         </div>
         <div className="basic">
           <h6 style={{ color: "orange" }}>BILLED MOTHLY</h6>
@@ -40,7 +43,9 @@ export default function Pricing() {
           <h5>Free Custom</h5>
           <h5>Outstanding</h5>
           <h5>Happy Customers</h5>
-          <button className="purchase-btn">PURCHASE</button>
+          <NavLink to="/membership">
+            <button className="purchase-btn">PURCHASE</button>
+          </NavLink>
         </div>
         <div className="beginer">
           <h6 style={{ color: "orange" }}>BILLED MOTHLY</h6>
@@ -51,7 +56,9 @@ export default function Pricing() {
           <h5>Free Custom</h5>
           <h5>Outstanding</h5>
           <h5>Happy Customers</h5>
-          <button className="purchase-btn">PURCHASE</button>
+          <NavLink to="/membership">
+            <button className="purchase-btn">PURCHASE</button>
+          </NavLink>
         </div>
       </div>
       {/* footer */}

@@ -29,11 +29,7 @@ export default function Nav() {
                 Home
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/services" className="nav_link">
-                Services
-              </NavLink>
-            </li>
+
             <li>
               <NavLink to="/classes" className="nav_link">
                 Classes
@@ -42,6 +38,11 @@ export default function Nav() {
             <li>
               <NavLink to="/pricing" className="nav_link">
                 Pricing
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/services" id="services" className="nav_link">
+                Services
               </NavLink>
             </li>
             <li>

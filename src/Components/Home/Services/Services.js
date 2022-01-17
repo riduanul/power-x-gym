@@ -6,7 +6,7 @@ import nutrition from "../../../Images/nutrition1.png";
 
 export default function Services() {
   return (
-    <div className="services mt-5 pt-5 mb-5 pb-5 container">
+    <div id="service" className="services mt-5 pt-5 mb-5 pb-5 container">
       <div className="progression">
         ="
         <img src={progression} alt="" className="mt-5" />

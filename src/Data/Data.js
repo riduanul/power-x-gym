@@ -36,7 +36,7 @@ const data = [
   },
   {
     id: 6,
-    title: "PSYCHO TRAINING",
+    title: "YOGA TRAINING",
     img: "https://i.ibb.co/LZRp5WP/pshycho.jpg",
     details:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis quo vitae ullam consectetur repellat eum tempora alias commodi sit! Tempore rerum odit, eligendi placeat, maxime illum esse non officia dolor dolorum sequi, laborum a nostrum perferendis expedita distinctio soluta dicta eius. Placeat commodi laborum nemo ea aspernatur molestias cum quia.",
