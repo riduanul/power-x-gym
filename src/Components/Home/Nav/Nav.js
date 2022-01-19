@@ -1,8 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
+import { useAuth } from "../../../Context/AuthContext";
 
 export default function Nav() {
+  const { logOut, currentUser } = useAuth();
   return (
     <nav className="navbar navbar-expand-lg navbar-light ">
       <div className="container-fluid">
@@ -45,16 +47,26 @@ export default function Nav() {
                 Services
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/blog" className="nav_link">
-                Blog
-              </NavLink>
-            </li>
+
             <li>
               <NavLink to="/contact" className="nav_link">
                 Contact Us
               </NavLink>
             </li>
+
+            {currentUser ? (
+              <li onClick={logOut}>
+                <NavLink to="/" className="nav_link">
+                  Logout
+                </NavLink>
+              </li>
+            ) : (
+              <li>
+                <NavLink to="/login" className="nav_link">
+                  Login
+                </NavLink>
+              </li>
+            )}
           </ul>
         </div>
       </div>

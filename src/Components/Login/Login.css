@@ -1,0 +1,36 @@
+.extarnal-login {
+  margin: 50px auto;
+  width: 400px;
+  height: 400px;
+  padding: auto 30px;
+  border: 1px solid orange;
+}
+.login-btn {
+  margin-top: 100px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: orange;
+}
+button {
+  border: none;
+  background-color: none;
+}
+.google-btn {
+  border: none;
+  cursor: pointer;
+  border: none;
+  background-color: orange;
+}
+
+.login-btn:hover {
+  background-color: white;
+  border: 1px solid orange;
+}
+.google-btn:hover {
+  background-color: white;
+  border: 1px solid whit;
+}

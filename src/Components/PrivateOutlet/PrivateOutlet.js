@@ -1,11 +1,16 @@
 import React from "react";
-import useAuth from "../../hooks/useAuth";
-import { Navigate, Outlet } from "react-router-dom";
+import { useAuth } from "../../Context/AuthContext";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
 
 function PrivateOutlet() {
-  const auth = useAuth();
+  const { currentUser } = useAuth();
+  const location = useLocation();
 
-  return auth ? <Outlet /> : <Navigate to="login" />;
+  return currentUser ? (
+    <Outlet />
+  ) : (
+    <Navigate to="/login" replace state={{ from: location }} />
+  );
 }
 
 export default PrivateOutlet;

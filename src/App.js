@@ -7,19 +7,27 @@ import Login from "./Components/Login/Login.js";
 import ClassDetails from "./Components/ClassDetails/ClassDetails.js";
 import Membership from "./Components/Membership/Membership.js";
 import Payment from "./Components/Payment/Payment.js";
+import AuthProvider from "./Context/AuthContext.js";
+import PrivateOutlet from "./Components/PrivateOutlet/PrivateOutlet.js";
+import CompleteMembership from "./Components/CompleteMembership/CompleteMembership.js";
 
 function App() {
   return (
     <div>
-      <Routes>
-        <Route path="/*" element={<Home />} />
-        <Route path="/classes" element={<Classes />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/classDetails/:title" element={<ClassDetails />} />
-        <Route path="/membership" element={<Membership />} />
-        <Route path="/payment" element={<Payment />} />
-      </Routes>
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/classes" element={<Classes />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/completeMembership" element={<CompleteMembership />} />
+          <Route path="/classDetails/:title" element={<ClassDetails />} />
+          <Route path="/*" element={<PrivateOutlet />}>
+            <Route path="membership" element={<Membership />} />
+          </Route>
+          <Route path="/payment" element={<Payment />} />
+        </Routes>
+      </AuthProvider>
     </div>
   );
 }

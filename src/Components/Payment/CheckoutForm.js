@@ -8,11 +8,13 @@ import {
 } from "@stripe/react-stripe-js";
 import { useState } from "react";
 
+import { useNavigate } from "react-router-dom";
 const CheckoutForm = () => {
   const [paymentError, setPaymentError] = useState("");
   const [success, setSetSucces] = useState("");
   const stripe = useStripe();
   const elements = useElements();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,6 +33,7 @@ const CheckoutForm = () => {
       alert("Your payment was successful");
       setSetSucces(token);
       setPaymentError("");
+      navigate("/CompleteMembership");
     } else {
       setPaymentError(error);
       setSetSucces("");
