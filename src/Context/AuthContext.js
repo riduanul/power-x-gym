@@ -16,6 +16,7 @@ export function useAuth() {
 }
 
 export default function AuthProvider({ children }) {
+  const [data, setData] = useState();
   const [loading, setLoading] = useState();
   const [currentUser, setCurrentUser] = useState();
   const location = useLocation();
@@ -54,7 +55,7 @@ export default function AuthProvider({ children }) {
     const auth = getAuth();
     return signOut(auth);
   }
-  const value = { currentUser, logOut, handleGoogleLogIn };
+  const value = { currentUser, logOut, handleGoogleLogIn, data, setData };
   return (
     <AuthContext.Provider value={value}>
       {!loading && children}

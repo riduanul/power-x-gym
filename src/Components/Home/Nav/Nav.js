@@ -43,7 +43,7 @@ export default function Nav() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/services" id="services" className="nav_link">
+              <NavLink to="/notfound" id="services" className="nav_link">
                 Services
               </NavLink>
             </li>

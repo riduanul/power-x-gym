@@ -5,6 +5,7 @@ import Footer from "../Home/Footer/Footer";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "./CheckoutForm";
+import paypal from "../../Images/paypal.png";
 
 const stripePromise = loadStripe(
   "pk_test_51KI6z4Jmje3yJQm6lGWP3uty5784lnBSZGklVCxB3lrqS03gsGPfJ8nJ9cOqsHvNbVh3wwCXuSd9m3oEeNYNB41q00dTM6M0mo"
@@ -45,10 +46,23 @@ function Payment() {
         </div>
       </div>
       {/* payment gateway */}
-      <div className="payment mt-5 p-5">
+      <div className="payment container mt-5 p-5">
         <Elements stripe={stripePromise}>
           <CheckoutForm />
         </Elements>
+      </div>
+      <div className="container payment mt-5">
+        <div className="card-part d-flex justify-content-between container">
+          <div>
+            <label htmlFor=""> Paypal Card</label>
+          </div>
+          <div>
+            <img src={paypal} alt="" width="150" />
+          </div>
+        </div>
+        <h4 style={{ color: "red" }}>
+          We are sorry now paypal service is not available
+        </h4>
       </div>
 
       {/* // footer / */}

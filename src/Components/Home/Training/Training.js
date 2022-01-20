@@ -11,12 +11,12 @@ export default function Training() {
       </h1>
       <div className="row mt-5">
         <div className="col-md-6 col-sm-12 training">
-          <img src={training1} alt="" width="550" height="400" />
-          <div className="bottom-right"> YOGA TRAINING SESISON --></div>
+          <img src={training1} alt="" width="500" height="400" />
+          <div className="bottom-right"> YOGA TRAINING SESISON</div>
         </div>
         <div className="col-md-6 col-sm-12 training">
-          <img src={training2} alt="" width="550" height="400" />
-          <div className="bottom-left"> CARDIO TRAINING SESISON --> </div>
+          <img src={training2} alt="" width="500" height="400" />
+          <div className="bottom-left"> CARDIO TRAINING SESISON </div>
         </div>
       </div>
     </div>

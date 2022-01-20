@@ -2,13 +2,15 @@ import {
   CardNumberElement,
   CardExpiryElement,
   CardCvcElement,
-  CardElement,
   useStripe,
   useElements,
 } from "@stripe/react-stripe-js";
 import { useState } from "react";
-
 import { useNavigate } from "react-router-dom";
+import card1 from "../../Images/visa.png";
+import card2 from "../../Images/mastercard.png";
+import card3 from "../../Images/amex.png";
+
 const CheckoutForm = () => {
   const [paymentError, setPaymentError] = useState("");
   const [success, setSetSucces] = useState("");
@@ -41,24 +43,26 @@ const CheckoutForm = () => {
     }
   };
   return (
-    <div>
+    <div className="container payment-area">
+      <div className="card-part d-flex justify-content-between container">
+        <div>
+          <input type="radio" required />
+          <label htmlFor=""> select card</label>
+        </div>
+        <div>
+          <img src={card1} alt="" width="50" />
+          <img src={card2} alt="" width="50" />
+          <img src={card3} alt="" width="50" />
+        </div>
+      </div>
       <form onSubmit={handleSubmit}>
-        <fieldset
-          style={{
-            border: "2px groove",
-            padding: "20px",
-            lineHeight: "40px",
-          }}
-        >
-          <legend>Payment Details</legend>
-          <label htmlFor="">Card Number</label>
-          <CardNumberElement />
-          <label htmlFor="">Expiry Date</label>
-          <CardExpiryElement />
-          <label htmlFor="">CVC</label>
-          <CardCvcElement />
-          <button className="btn btn-warning mt-3">Pay</button>
-        </fieldset>
+        <label htmlFor="">Card Number</label>
+        <CardNumberElement />
+        <label htmlFor="">Expiry Date</label>
+        <CardExpiryElement />
+        <label htmlFor="">CVC</label>
+        <CardCvcElement />
+        <button className="btn btn-warning mt-3">Pay</button>
       </form>
       {paymentError && <p style={{ color: "red" }}>{paymentError.message}</p>}
       {success && <p style={{ color: "green" }}>"Your Payment Success!"</p>}

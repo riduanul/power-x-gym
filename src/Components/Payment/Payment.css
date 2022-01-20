@@ -4,3 +4,8 @@
   border-radius: 50%;
   background-color: orange;
 }
+.payment {
+  width: 75%;
+  height: 350px;
+  border: 1px solid black;
+}

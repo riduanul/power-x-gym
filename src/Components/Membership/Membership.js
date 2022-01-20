@@ -2,15 +2,26 @@ import React, { useState } from "react";
 import "./Membership.css";
 import CommonHeader from "../Home/Common/CommonHeader";
 import Footer from "../Home/Footer/Footer";
+import { useAuth } from "../../Context/AuthContext";
 
 import { useNavigate } from "react-router-dom";
 
 function Membership() {
+  const { data, setData } = useAuth();
+  const [formData, updateFormData] = useState();
   const [error, setError] = useState();
   const navigate = useNavigate();
 
+  const handleChange = (e) => {
+    updateFormData({
+      ...formData,
+      [e.target.name]: e.target.value.trim(),
+    });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
+    setData(formData);
+    console.log(data);
     if (!error) {
       navigate("/payment");
     } else {
@@ -54,8 +65,9 @@ function Membership() {
             <input
               type="firstName"
               className="form-control"
-              id="inputFirstName"
+              name="inputFirstName"
               required
+              onChange={handleChange}
             />
           </div>
           <div className="invalid-feedback">Please enter name</div>
@@ -66,7 +78,8 @@ function Membership() {
             <input
               type="SecondName"
               className="form-control"
-              id="inputSecondName"
+              name="inputSecondName"
+              onChange={handleChange}
               required
             />
           </div>
@@ -77,7 +90,8 @@ function Membership() {
             <input
               type="email"
               className="form-control"
-              id="inputEmail"
+              name="inputEmail"
+              onChange={handleChange}
               required
             />
           </div>
@@ -88,7 +102,8 @@ function Membership() {
             <input
               type="SecondName"
               className="form-control"
-              id="inputMobileNumber"
+              name="inputMobileNumber"
+              onChange={handleChange}
               required
             />
           </div>
@@ -99,8 +114,9 @@ function Membership() {
             <input
               type="text"
               className="form-control"
-              id="inputAddress"
+              name="inputAddress"
               placeholder="1234 Main St"
+              onChange={handleChange}
               required
             />
           </div>
@@ -111,8 +127,9 @@ function Membership() {
             <input
               type="text"
               className="form-control"
-              id="inputAddress2"
+              name="inputAddress2"
               placeholder="Apartment, studio, or floor"
+              onChange={handleChange}
               required
             />
           </div>
@@ -123,7 +140,8 @@ function Membership() {
             <input
               type="text"
               className="form-control"
-              id="inputCity"
+              name="inputCity"
+              onChange={handleChange}
               required
             />
           </div>
@@ -131,7 +149,12 @@ function Membership() {
             <label for="inputState" className="form-label">
               State
             </label>
-            <select id="inputState" className="form-select" required>
+            <select
+              name="inputState"
+              onChange={handleChange}
+              className="form-select"
+              required
+            >
               <option selected>Choose...</option>
               <option>Chittogong</option>
               <option>Dhaka</option>
@@ -146,7 +169,8 @@ function Membership() {
             <input
               type="text"
               className="form-control"
-              id="inputZip"
+              name="inputZip"
+              onChange={handleChange}
               required
             />
           </div>
